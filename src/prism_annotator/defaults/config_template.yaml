@@ -1,0 +1,28 @@
+# prism-annotator configuration
+# See: https://github.com/sociocom/prism-annotator
+
+phase: "entity"  # "entity", "medical_relation", or "time_relation"
+
+data:
+  input_path: "data/"          # directory of .txt files, or a .csv file
+  # input_format: "txt"        # auto-detected from path; set explicitly if needed
+  # text_column: "text"        # CSV column name for document text
+  # id_column: "doc_id"        # CSV column name for document ID
+  # max_documents: 5           # limit for testing
+
+model:
+  model_id: "anthropic/claude-sonnet-4"
+  base_url: "https://openrouter.ai/api/v1"
+  api_key_env: "OPENROUTER_API_KEY"
+
+extraction:
+  temperature: 0.0
+  timeout_per_doc: 600
+  max_retries: 2
+
+output:
+  output_dir: "output/runs"
+
+prompts:
+  language: "ja"               # "ja" or "en"
+  # prompts_dir: "prompts/"    # override: path to custom prompts directory

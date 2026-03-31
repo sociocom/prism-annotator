@@ -1,0 +1,7 @@
+# Few-shot examples for time relation extraction.
+# Each entry has "input" (TANL-annotated text with entity IDs) and "output" (relation lines).
+# Format: relation_type: eX -> eY
+# Example:
+#   - input: "[2024/10/1 | TIMEX3(DATE) | e1] [受診 | cc(+) | e2]"
+#     output: "timeOn: e2 -> e1"
+[]

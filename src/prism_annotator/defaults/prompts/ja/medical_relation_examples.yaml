@@ -1,0 +1,7 @@
+# Few-shot examples for medical relation extraction.
+# Each entry has "input" (TANL-annotated text with entity IDs) and "output" (relation lines).
+# Format: relation_type: eX -> eY
+# Example:
+#   - input: "[右胸 | a | e1][乳がん | d(+) | e2]"
+#     output: "subRegion: e1 -> e2"
+[]

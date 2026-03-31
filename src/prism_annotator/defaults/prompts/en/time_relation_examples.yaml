@@ -1,0 +1,3 @@
+# Few-shot examples for time relation extraction (English).
+# Each entry has "input" (TANL-annotated text with entity IDs) and "output" (relation lines).
+[]

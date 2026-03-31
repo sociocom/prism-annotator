@@ -1,0 +1,6 @@
+# Few-shot examples for entity extraction (English).
+# Derived from PRISM v8 annotation guidelines, section 2.5.
+- input: |-
+    At the base of the lung, straight under both sides of the pleura, a predominantly right reticular shadow and traction bronchiectasis was found, no honeycomb lung was found. Suspected Possible UIP pattern. Scattered patchy ground-glass opacity in the right lung. No inconsistency in single-string interstitial pneumonia changes. No indication of significant adenopathy. No findings of pleural effusions. Aorta calcification was found. Small LDAs were found in both thyroid glands. Cysts in both kidneys.
+  output: |-
+    At the [base of the lung | a], [straight under both sides of the pleura | a], a [predominantly | f] [right | a] [reticular shadow and traction bronchiectasis | d(+)] was found, no [honeycomb lung | d(-)] was found. Suspected [Possible UIP pattern | p]. [Scattered | f] [patchy ground-glass opacity | d(+)] in the [right lung | a]. No inconsistency in single-string [interstitial pneumonia changes | d(+)]. No indication of [significant | f] [adenopathy | d(-)]. No findings of [pleural effusions | d(-)]. [Aorta | a] [calcification | d(+)] was found. [Small LDAs | d(+)] were found in [both thyroid glands | a]. [Cysts in both kidneys | d(+)].

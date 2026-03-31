@@ -1,0 +1,7 @@
+# Few-shot examples for entity extraction.
+# Each entry has "input" (raw text) and "output" (TANL-annotated text).
+# Format: [text | entity_type(attribute)]
+# Example:
+#   - input: "胸部CTで間質性肺炎の所見"
+#     output: "[胸部CT | t-test(+)]で[間質性肺炎 | d(+)]の所見"
+[]
