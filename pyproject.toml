@@ -3,13 +3,30 @@ name = "prism-annotator"
 version = "0.2.0"
 description = "PRISM annotation of medical texts using LLMs and TANL parsing"
 readme = "README.md"
+license = "MIT"
 requires-python = ">=3.12"
+authors = [
+    { name = "Shuntaro Yada", email = "contact@shuntaroy.com" },
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Topic :: Text Processing :: Linguistic",
+]
 dependencies = [
     "pyyaml>=6.0",
     "openai>=1.0",
     "python-dotenv>=1.0",
     "typer>=0.12",
 ]
+
+[project.urls]
+Homepage = "https://github.com/sociocom/prism-annotator"
+Repository = "https://github.com/sociocom/prism-annotator"
+Issues = "https://github.com/sociocom/prism-annotator/issues"
 
 [project.scripts]
 prism = "prism_annotator.cli:app"
