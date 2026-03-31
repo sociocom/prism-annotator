@@ -1,0 +1,81 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the original PRISM annotation work."
+title: prism-annotator
+type: software
+license: MIT
+repository-code: https://github.com/sociocom/prism-annotator
+references:
+  - type: conference-paper
+    title: "Towards a Versatile Medical-Annotation Guideline Feasible Without Heavy Medical Knowledge: Starting From Critical Lung Diseases"
+    authors:
+      - family-names: Yada
+        given-names: Shuntaro
+      - family-names: Joh
+        given-names: Ayami
+      - family-names: Tanaka
+        given-names: Ribeka
+      - family-names: Cheng
+        given-names: Fei
+      - family-names: Aramaki
+        given-names: Eiji
+      - family-names: Kurohashi
+        given-names: Sadao
+    collection-title: "Proceedings of the Twelfth Language Resources and Evaluation Conference"
+    year: 2020
+    month: 5
+    start: 4565
+    end: 4572
+    publisher:
+      name: European Language Resources Association
+    conference:
+      name: LREC 2020
+      city: Marseille
+      country: FR
+    url: https://aclanthology.org/2020.lrec-1.561/
+    isbn: "979-10-95546-34-4"
+  - type: article
+    title: "汎用的な臨床医学テキストアノテーション仕様およびガイドラインの策定：重篤肺疾患ドメインに着目して"
+    authors:
+      - family-names: 矢田
+        given-names: 竣太郎
+      - family-names: 田中
+        given-names: リベカ
+      - family-names: Cheng
+        given-names: Fei
+      - family-names: 荒牧
+        given-names: 英治
+      - family-names: 黒橋
+        given-names: 禎夫
+    journal: "自然言語処理"
+    volume: 29
+    issue: 4
+    start: 1165
+    end: 1197
+    year: 2022
+    url: https://www.jstage.jst.go.jp/article/jnlp/29/4/29_1165/_article/-char/ja/
+  - type: conference-paper
+    title: "Structured Prediction as Translation between Augmented Natural Languages"
+    authors:
+      - family-names: Paolini
+        given-names: Giovanni
+      - family-names: Athiwaratkun
+        given-names: Ben
+      - family-names: Krone
+        given-names: Jason
+      - family-names: Ma
+        given-names: Jie
+      - family-names: Achille
+        given-names: Alessandro
+      - family-names: Anubhai
+        given-names: Rishita
+      - family-names: Nogueira dos Santos
+        given-names: Cicero
+      - family-names: Xiang
+        given-names: Bing
+      - family-names: Soatto
+        given-names: Stefano
+    collection-title: "Proceedings of the Ninth International Conference on Learning Representations"
+    year: 2021
+    conference:
+      name: ICLR 2021
+    url: https://openreview.net/forum?id=US-TP-xnXI

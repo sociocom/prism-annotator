@@ -1,6 +1,6 @@
 # prism-annotator
 
-A CLI tool for automatic [PRISM](https://sociocom.naist.jp/prism/) annotation of medical/clinical texts using LLMs.
+A CLI tool for automatic PRISM annotation of medical/clinical texts using LLMs.
 
 PRISM (Problem-oriented, Real-time, Informatics-based, Structured, Medical record) defines a schema for annotating medical entities (diseases, symptoms, anatomical parts, tests, medications, etc.) and their relations (temporal, spatial, causal) in clinical text.
 
@@ -132,7 +132,23 @@ Each phase has a system prompt (`.md`) and few-shot examples (`.yaml`):
 
 ## PRISM Schema (v8)
 
-13 entity types, 10 relation types. See [PRISM Annotation Guidelines v8](docs/PRISM_Annotation_Guidelines-v8-English.pdf) for full specification.
+13 entity types, 10 relation types. See the PRISM Annotation Guidelines v8 for full specification:
+
+- [Japanese version](https://doi.org/10.6084/m9.figshare.16418787)
+- [English version](https://doi.org/10.6084/m9.figshare.16418811)
+
+The PRISM annotation scheme was originally proposed in the following works:
+
+> Shuntaro Yada, Ayami Joh, Ribeka Tanaka, Fei Cheng, Eiji Aramaki, and Sadao Kurohashi. 2020. Towards a Versatile Medical-Annotation Guideline Feasible Without Heavy Medical Knowledge: Starting From Critical Lung Diseases. In *Proceedings of the Twelfth Language Resources and Evaluation Conference (LREC)*, pages 4565–4572, Marseille, France. European Language Resources Association.
+> [[ACL Anthology]](https://aclanthology.org/2020.lrec-1.561/)
+
+> 矢田 竣太郎, 田中 リベカ, Fei Cheng, 荒牧 英治, 黒橋 禎夫. 2022. 汎用的な臨床医学テキストアノテーション仕様およびガイドラインの策定：重篤肺疾患ドメインに着目して. *自然言語処理*, 29(4), pp. 1165–1197.
+> [[J-STAGE]](https://www.jstage.jst.go.jp/article/jnlp/29/4/29_1165/_article/-char/ja/)
+
+The TANL inline annotation format used by this tool is adapted from:
+
+> Giovanni Paolini, Ben Athiwaratkun, Jason Krone, Jie Ma, Alessandro Achille, Rishita Anubhai, Cicero Nogueira dos Santos, Bing Xiang, and Stefano Soatto. 2021. Structured Prediction as Translation between Augmented Natural Languages. In *Proceedings of the Ninth International Conference on Learning Representations (ICLR)*.
+> [[OpenReview]](https://openreview.net/forum?id=US-TP-xnXI)
 
 ## Supported LLM Providers
 
@@ -151,6 +167,38 @@ model:
   base_url: "https://api.openai.com/v1"
   api_key_env: "OPENAI_API_KEY"
 ```
+
+## Citation
+
+If you use this tool, please cite the original PRISM annotation works:
+
+```bibtex
+@inproceedings{yada-etal-2020-towards,
+    title = "Towards a Versatile Medical-Annotation Guideline Feasible Without Heavy Medical Knowledge: Starting From Critical Lung Diseases",
+    author = "Yada, Shuntaro and Joh, Ayami and Tanaka, Ribeka and Cheng, Fei and Aramaki, Eiji and Kurohashi, Sadao",
+    booktitle = "Proceedings of the Twelfth Language Resources and Evaluation Conference",
+    month = may,
+    year = "2020",
+    address = "Marseille, France",
+    publisher = "European Language Resources Association",
+    url = "https://aclanthology.org/2020.lrec-1.561/",
+    pages = "4565--4572",
+    isbn = "979-10-95546-34-4",
+}
+
+@article{yada-etal-2022-prism,
+    title = "汎用的な臨床医学テキストアノテーション仕様およびガイドラインの策定：重篤肺疾患ドメインに着目して",
+    author = "矢田, 竣太郎 and 田中, リベカ and Cheng, Fei and 荒牧, 英治 and 黒橋, 禎夫",
+    journal = "自然言語処理",
+    volume = "29",
+    number = "4",
+    pages = "1165--1197",
+    year = "2022",
+    url = "https://www.jstage.jst.go.jp/article/jnlp/29/4/29_1165/_article/-char/ja/",
+}
+```
+
+See also [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 
 ## Licence
 
