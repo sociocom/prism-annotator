@@ -4,7 +4,7 @@ A CLI tool for automatic PRISM annotation of medical/clinical texts using LLMs.
 
 PRISM (Problem-oriented, Real-time, Informatics-based, Structured, Medical record) defines a schema for annotating medical entities (diseases, symptoms, anatomical parts, tests, medications, etc.) and their relations (temporal, spatial, causal) in clinical text.
 
-`prism-annotator` uses the TANL (Typed Augmented Natural Language) inline annotation format with LLMs to extract structured PRISM annotations from free-text medical documents.
+`prism-annotator` uses the TANL (Translation between Augmented Natural Languages; Paolini+, ICLR 2021) inline annotation format with LLMs to extract structured PRISM annotations from free-text medical documents.
 
 ## Installation
 
@@ -144,6 +144,8 @@ The PRISM annotation scheme was originally proposed in the following works:
 
 > 矢田 竣太郎, 田中 リベカ, Fei Cheng, 荒牧 英治, 黒橋 禎夫. 2022. 汎用的な臨床医学テキストアノテーション仕様およびガイドラインの策定：重篤肺疾患ドメインに着目して. *自然言語処理*, 29(4), pp. 1165–1197.
 > [[J-STAGE]](https://www.jstage.jst.go.jp/article/jnlp/29/4/29_1165/_article/-char/ja/)
+
+Note that our "PRISM" acronym (i.e. Problem-oriented, Real-time, Informatics-based, Structured, Medical record) dereived from a research funding scheme, called [PRISM (Public/Private R&D Investment Strategic Expansion PrograM)](https://www8.cao.go.jp/cstp/prism/index.html), by which our research project above was originally supported.
 
 The TANL inline annotation format used by this tool is adapted from:
 
