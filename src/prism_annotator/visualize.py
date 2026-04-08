@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 
 from prism_annotator.models import AnnotatedDocument, load_results
+from prism_annotator.output import _align_entities
 from prism_annotator.schema import (
     ENTITY_TYPES,
     TEMPORAL_RELATIONS,
@@ -60,10 +61,13 @@ TEMPORAL_REL_NAMES = set(TEMPORAL_RELATIONS.keys())
 
 def prepare_doc_data(doc: AnnotatedDocument) -> dict:
     """Prepare a single AnnotatedDocument for JSON embedding in the viewer."""
+    aligned = _align_entities(doc.text, doc.entities)
+    aligned_map: dict[int, tuple[int, int]] = {idx: (s, e) for s, e, idx in aligned}
     ents = []
-    for ent in doc.entities:
-        start = ent.span.start if ent.span else None
-        end = ent.span.end if ent.span else None
+    for i, ent in enumerate(doc.entities):
+        se = aligned_map.get(i)
+        start = se[0] if se else None
+        end = se[1] if se else None
 
         ents.append({
             "cls": ent.label,

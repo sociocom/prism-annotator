@@ -202,6 +202,16 @@ If you use this tool, please cite the original PRISM annotation works:
 
 See also [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 
+## Changelog
+
+### 0.2.1
+
+- Fix: viewer entity highlights now align to the original source text instead of using TANL-stripped offsets, which caused the first character(s) of entities to be excluded or misaligned.
+
+### 0.2.0
+
+- Initial release.
+
 ## Licence
 
 MIT
